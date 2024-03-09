@@ -21,7 +21,7 @@
     
     <div class="col">
         <div class="button shadow">
-            <div id="cardio" class="text">
+            <div id="cardio" class="text" onclick="getLocation()">
                 <h2>
                     <i class="fa-solid fa-heart-pulse"></i> Cardiolog
                 </h2>
@@ -29,7 +29,7 @@
         </div>
 
         <div class="button shadow">
-            <div id="neuro" class="text">
+            <div id="neuro" class="text" onclick="getLocation()">
                 <h2>
                     <i class="fa-solid fa-brain"></i> Neurolog
                 </h2>
@@ -37,7 +37,7 @@
         </div>
 
         <div class="button shadow">
-            <div id="oftal" class="text">
+            <div id="oftal" class="text" onclick="getLocation()">
                 <h2>
                     <i class="fa-solid fa-eye"></i> Oftalmolog
                 </h2>
@@ -45,7 +45,7 @@
         </div>
 
         <div class="button shadow">
-            <div id="pneumo" class="text">
+            <div id="pneumo" class="text" onclick="getLocation()">
                 <h2>
                     <i class="fa-solid fa-lungs"></i> Pneumolog
                 </h2>
@@ -58,6 +58,25 @@
         </div>
     </div>
 </div>
+
+<script>
+    // const x = document.getElementById();
+
+    function getLocation() {
+    window.onload = getLocation;
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        alert('Geolocation is not supported by this browser.');
+    }
+    }
+
+    function showPosition(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        alert('Latitude: ' + latitude + ' Longitude: ' + longitude);
+    }
+</script>
     
 </body>
 </html>
