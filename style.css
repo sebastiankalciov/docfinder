@@ -36,7 +36,7 @@ body {
 
 .col {
     height:auto;
-    width: 350px;;
+    width: 100%;
     text-align: center;
 }
 
@@ -65,7 +65,6 @@ row.menu{
 }
 
 .button:active {
-  background-color: #3e8e41;
   box-shadow: 0 5px #2d2d2d;
 }
 .button {
@@ -76,13 +75,14 @@ row.menu{
     height: 60px;
     font: 24px Helvetica;
     text-align: center;
+    text-wrap:pretty;
     text-decoration: none;
     font-size: medium;
-    width:100%;
+    width:auto;
     cursor: pointer;
     display:block;
-    opacity:0.9;
-    border-radius:0px 10px 10px 0px;
+    opacity:0.8;
+    border-radius:10px 10px 10px 10px;
     margin:0.5em;
     user-select: none;
   }
