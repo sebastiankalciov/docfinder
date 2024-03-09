@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DocFinder</title>
+        <link rel="icon" type="image/x-icon" href="../meta/favicon.jpg">
         <link rel="stylesheet" href="../meta/style.css">
         <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
@@ -15,37 +16,33 @@
     <body>
         <div class="control">
             <div class="row header">
-                <a href="index.html" class="logo">
-                    <img src="\docfinder\meta\logo.png" 
-                        alt="Go to Homepage">
+                <a href="index.html">
+                    <img src="..\meta\logo.png" 
+                        alt="Go to Homepage" 
+                        width="200">
                     </img>
                 </a>
-                <h2>Am gasit n rezultate:</h2>
+                <h2>Am gasit n rezultate:</h2> <!--Add query result number-->
             </div>
-        
-            <div class="grid-container">
-                <div class="grid-item">1</div>
-                <div class="grid-item">2</div>
-                <div class="grid-item">3</div>
-                <div class="grid-item">4</div>
-                <div class="grid-item">5</div>
-                <div class="grid-item">6</div>
-                <div class="grid-item">7</div>
-                <div class="grid-item">8</div>
-                <div class="grid-item">9</div>
-              </div>
-        </div>
 
-        
-
-        <div class="background elements">
-            <div class="circle shadow",
-                style="bottom:0; left:0">
-                <div class="innercircle shadow",
-                    style="bottom: 0; left: 0">
+            <div class="col">
+                <!-- API Results -->
+                <div class="button shadow">
+                    <div class="text"> <!--onclick="divRedirect()"-->
+                        <h2>
+                            Location_Name, Working Hrs, Tel_Num
+                        </h2>
+                    </div>
                 </div>
+
+                <div class="background_elements circle shadow"> <!--style="bottom:0;"-->
+                    <div class="background_elements innercircle shadow"> <!--style="bottom:0"-->
+                    </div>
+                </div>
+
             </div>
+
         </div>
-        
+    
     </body>
 </html>
