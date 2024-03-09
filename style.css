@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/urbanist/v15/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4vH5mqe8Q.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
+
+body {
+    background-color: rgb(202, 202, 202);
+  }
+
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em 2em;
+    justify-content: space-evenly;
+    align-content: flex-start;
+  }
+
+.control {
+    height: 100vh;
+    width: 100vw;
+    border-color:aqua;
+    position:absolute;
+    top:0;
+    left:0;
+    font-family: Urbanist;
+    overflow: hidden;
+}
+
+.col {
+    height:100vh;
+    width:40%
+}
+
+.sidebar {
+    background-color:#919191;
+    border-radius:0px 350px 0px 0px;
+
+}
+
+.row {
+    width:auto;
+    border: 1px solid rgb(202, 202, 202);
+    margin-bottom:1em;
+}
+
+row.menu{
+    height:75%;
+
+}
+
+.header {
+    text-align: center;
+    color:rgb(49, 49, 49);
+    background-color: rgb(202, 202, 202);
+    
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+}
+.button {
+    background-color: #a7a1a0; /* Green */
+    border: none;
+    color: white;
+    padding: 2%;
+    height: 3em;
+    text-align: center;
+    text-decoration: none;
+    font-size: auto;
+    width:100%;
+    cursor: pointer;
+    display:block;
+    opacity:0.9;
+    border-radius:0px 10px 10px 0px;
+    margin:0.5em
+  }
+
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+
+}
+
+.button:active {
+    background-color: #fa8c8c;
+}
+
+.circle {
+    overflow: hidden;
+    width:70vw;
+    height:70vh;
+    position:absolute;
+    border-radius: 0 100% 0 0;
+    background-color: rgb(52, 52, 52);
+
+}
+.innercircle {
+    overflow: hidden;
+    width:60vw;
+    height:60vh;
+    position:absolute;
+    border-radius: 0 100% 0 0;
+    background-color: #a7a1a0;
+
+}
