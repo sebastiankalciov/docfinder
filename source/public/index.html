@@ -73,23 +73,25 @@
                 body: JSON.stringify({speciality: specialityName})
             }).then(res => res.json())
               .then(data => {
-           
+    
                 var processedData = []
-                
-                for (let i = 0; i < 5; i++) {
+
+                for (let i = 0; i < 3; i++) {
+                    console.log(data[i])
                     if(data[i].opening_hours == undefined) {
-                        processedData.push([data[i].name, data[i].vicinity, "Inchis"])
+   
+                        processedData.push([data[i].name, data[i].vicinity, "Inchis", "|"])
                     } else {
-                        processedData.push([data[i].name, data[i].vicinity, data[i].opening_hours.open_now])
+                        processedData.push([data[i].name, data[i].vicinity, (data[i].opening_hours === false ? 'Inchis': "Deschis"), "|"])
                     
                     }
                 }
                 
-                console.log(processedData)
                 window.location.href = `query_response.html?jsonData=${encodeURIComponent(processedData)}`;
+                
               })
 
-            console.log(data)
+            
         }
 
     </script>

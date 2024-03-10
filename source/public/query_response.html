@@ -33,6 +33,8 @@
                         <h2>
                             Location_Name, Working Hrs, Tel_Num
                         </h2>
+                            <p id = "data"></p>
+                        
                     </div>
                 </div>
 
@@ -44,13 +46,22 @@
 
         </div>
 
+
         <script>
-          let queryString = window.location.search;
-          let urlParams = new URLSearchParams(queryString);
-          let jsonData = urlParams.get("jsonData");
-          let decodedData = decodeURIComponent(jsonData);
-          console.log(decodedData)
-          
+            let queryString = window.location.search;
+            let urlParams = new URLSearchParams(queryString);
+            let jsonData = urlParams.get("jsonData");
+
+            let decodedData = decodeURIComponent(jsonData);
+
+            let listData = decodedData.split("|")
+            for (let i = 0; i < 3; i++) {
+      
+                let element = document.getElementById("data");
+
+                element.innerHTML += listData[i] + "<br>"
+            }
+
         </script>
 
     </body>
