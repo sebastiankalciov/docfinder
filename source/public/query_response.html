@@ -23,7 +23,7 @@
                         width="200">
                     </img>
                 </a>
-                <h2>Am gasit n rezultate:</h2> <!--Add query result number-->
+                <h2 id = "counter"></h2> <!--Add query result number-->
             </div>
 
             <div class="col">
@@ -48,6 +48,7 @@
 
 
         <script>
+            
             let queryString = window.location.search;
             let urlParams = new URLSearchParams(queryString);
             let jsonData = urlParams.get("jsonData");
@@ -55,12 +56,15 @@
             let decodedData = decodeURIComponent(jsonData);
 
             let listData = decodedData.split("|")
+            let counter = listData.length
+
             for (let i = 0; i < 3; i++) {
       
                 let element = document.getElementById("data");
 
                 element.innerHTML += listData[i] + "<br>"
             }
+            document.getElementById("counter").innerHTML = `Am gasit ${counter - 1} rezultate:`
 
         </script>
 
