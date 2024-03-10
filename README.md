@@ -1,4 +1,6 @@
 # DocFinder
+![DocFinder logo](https://raw.githubusercontent.com/sebastiankalciov/docfinder/main/meta/logo.png "DocFinder logo")
+
 This is a project made during the ITFest Hackathon 2024, specifically for the 'Health & Wellness" track.
 ## Contributors (Team members)
 
