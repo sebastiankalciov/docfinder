@@ -122,20 +122,20 @@
                 body: JSON.stringify({speciality: specialityName})
             }).then(res => res.json())
               .then(data => {
-    
+
                 var processedData = []
 
                 for (let i = 0; i < 3; i++) {
 
                     if(data[i].opening_hours === undefined) {
    
-                        processedData.push([data[i].name, data[i].vicinity, "Program Necunoscut", "|"])
+                        processedData.push([data[i].name, data[i].vicinity, "Program: Necunoscut", "|"])
                     } else {
-                        processedData.push([data[i].name, data[i].vicinity, (data[i].opening_hours === false ? 'Inchis': "Deschis"), "|"])
+                        processedData.push([data[i].name, data[i].vicinity, (data[i].opening_hours === false ? 'Program: Inchis': "Program: Deschis"), "|"])
                     
                     }
                 }
-                
+             
                 window.location.href = `query_response.html?jsonData=${encodeURIComponent(processedData)}`;
                 
               })

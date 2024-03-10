@@ -59,13 +59,12 @@
             let decodedData = decodeURIComponent(jsonData);
 
             let listData = decodedData.split("|")
+            
             let counter = listData.length
             
-            let innerData = listData[0].split(",")
-
-            document.getElementById("data0").innerHTML += listData[0];
-            document.getElementById("data1").innerHTML += listData[1];
-            document.getElementById("data2").innerHTML += listData[2];
+            document.getElementById("data0").innerHTML += listData[0].replace(",", " ");
+            document.getElementById("data1").innerHTML += listData[1].replace(",", " ");
+            document.getElementById("data2").innerHTML += listData[2].replace(",", " ");
 
             document.getElementById("counter").innerHTML = `Am gasit ${counter - 1} rezultate:`
 
