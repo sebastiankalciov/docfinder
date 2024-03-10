@@ -75,6 +75,7 @@
               .then(data => {
            
                 var processedData = []
+                
                 for (let i = 0; i < 5; i++) {
                     if(data[i].opening_hours == undefined) {
                         processedData.push([data[i].name, data[i].vicinity, "Inchis"])
