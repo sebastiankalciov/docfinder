@@ -1,7 +1,7 @@
 {
   "name": "docfinder",
   "version": "1.0.0",
-  "description": "Docfinder is a project made for ITFest Hackaton 2024",
+  "description": "Docfinder is a Web Application made for ITFest Hackaton 2024",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
