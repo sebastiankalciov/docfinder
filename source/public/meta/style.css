@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
 body {
     background-color: rgb(202, 202, 202);
   }
@@ -15,8 +17,8 @@ body {
   }
 
 .control {
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     border-color:aqua;
     position: absolute;
     top:0;
@@ -51,7 +53,9 @@ row.menu{
     text-align: center;
     color:rgb(49, 49, 49);
     background-color: rgb(202, 202, 202);
-    
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .button:active {

@@ -15,14 +15,16 @@
     </head>
 
     <body>
-
         <div class="control">
             <div class="row header">
-                <img src="./meta/logo.png" alt="DocFinder Logo" width="200">
-                <h2>Alegeti specialitatea doctorului:</h2>
+                <img src="./meta/logo.png" 
+                    alt="DocFinder Logo" 
+                    width="200">
+                <h2>Bine ați venit! Ce doctor căutați?</h2>
             </div>
-            
+        
             <div class="col">
+                <!-- Speciality options -->
                 <div class="button shadow" onclick="sendSpeciality('Cardiolog')">
                     <div id="cardio" class="text">
                         <h2>
@@ -55,15 +57,60 @@
                     </div>
                 </div>
 
-                <div class="background_elements circle shadow">
-                    <div class="background_elements innercircle shadow"></div>
+                <div class="button shadow" onclick="sendSpeciality('Medic de familie')">
+                    <div id="medfam" class="text">
+                        <h2>
+                            <i class="fa-solid fa-user-nurse"></i> Medic de familie
+                        </h2>
+                    </div>
                 </div>
-            
+
+                <div class="button shadow" onclick="sendSpeciality('ORL')">
+                    <div id="orl" class="text">
+                        <h2>
+                            <img src="./meta/icons/orl_icon.png" width="27"/> ORL
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow" onclick="sendSpeciality('Endocrinolog')">
+                    <div id="endocr" class="text">
+                        <h2>
+                            <img src="./meta/icons/endo_icon.png" width="27"> Endocrinolog
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow" onclick="sendSpeciality('Psiholog')">
+                    <div id="psiho" class="text">
+                        <h2>
+                            <img src="./meta/icons/psiho_icon.png" width="27"> Psiholog
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow" onclick="sendSpeciality('obstetrica ginecologie')">
+                    <div id="pneumo" class="text">
+                        <h2>
+                            <img src="./meta/icons/obgyn_icon.png" width="27"> Obstetrician / Ginecolog
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow" onclick="sendSpeciality('dermatolog')">
+                    <div id="pneumo" class="text">
+                        <h2>
+                            <img src="./meta/icons/derma_icon.png" width="27"> Dermatolog
+                        </h2>
+                    </div>
+                </div>
+
             </div>
+            
         </div>
 
-    <script>
 
+    <script>
         async function sendSpeciality(specialityName) {
             var data = await fetch('/', {
                 method: 'POST',
@@ -95,20 +142,5 @@
         }
 
     </script>
-
-    <!-- function getLocation() {
-        window.onload = getLocation;
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-            alert('Geolocation is not supported by this browser.');
-        }
-        }
-
-        function showPosition(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-            alert('Latitude: ' + latitude + ' Longitude: ' + longitude);
-        } -->
     </body>
 </html>
