@@ -30,16 +30,28 @@
                 <!-- API Results -->
                 <div class="button shadow">
                     <div class="text">
-                        <p id = "data"></p>
+                        <p id = "data0"></p>
                     </div>
+                    
                 </div>
-
+                <div class="button shadow">
+                    <div class="text">
+                        <p id = "data1"></p>
+                    </div>
+                    
+                </div>
+                <div class="button shadow">
+                    <div class="text">
+                        <p id = "data2"></p>
+                    </div>
+                    
+                </div>
             </div>
 
         </div>
 
         <script>
-            
+
             let queryString = window.location.search;
             let urlParams = new URLSearchParams(queryString);
             let jsonData = urlParams.get("jsonData");
@@ -48,13 +60,13 @@
 
             let listData = decodedData.split("|")
             let counter = listData.length
+            
+            let innerData = listData[0].split(",")
 
-            for (let i = 0; i < 3; i++) {
-      
-                let element = document.getElementById("data");
+            document.getElementById("data0").innerHTML += listData[0];
+            document.getElementById("data1").innerHTML += listData[1];
+            document.getElementById("data2").innerHTML += listData[2];
 
-                element.innerHTML += listData[i] + "<br>"
-            }
             document.getElementById("counter").innerHTML = `Am gasit ${counter - 1} rezultate:`
 
         </script>

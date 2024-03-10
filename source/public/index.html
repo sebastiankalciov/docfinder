@@ -111,7 +111,9 @@
 
 
     <script>
+
         async function sendSpeciality(specialityName) {
+
             var data = await fetch('/', {
                 method: 'POST',
                 headers: {
@@ -124,10 +126,10 @@
                 var processedData = []
 
                 for (let i = 0; i < 3; i++) {
-                    console.log(data[i])
-                    if(data[i].opening_hours == undefined) {
+
+                    if(data[i].opening_hours === undefined) {
    
-                        processedData.push([data[i].name, data[i].vicinity, "Inchis", "|"])
+                        processedData.push([data[i].name, data[i].vicinity, "Program Necunoscut", "|"])
                     } else {
                         processedData.push([data[i].name, data[i].vicinity, (data[i].opening_hours === false ? 'Inchis': "Deschis"), "|"])
                     
@@ -137,8 +139,6 @@
                 window.location.href = `query_response.html?jsonData=${encodeURIComponent(processedData)}`;
                 
               })
-
-            
         }
 
     </script>
