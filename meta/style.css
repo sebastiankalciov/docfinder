@@ -15,7 +15,7 @@ body {
   }
 
 .control {
-    height: 100vh;
+    height: auto;
     width: 100vw;
     border-color:aqua;
     position: absolute;

@@ -19,7 +19,7 @@
                 <img src="../meta/logo.png" 
                     alt="DocFinder Logo" 
                     width="200">
-                <h2>Alegeti specialitatea doctorului:</h2>
+                <h2>Ce doctor cautati?</h2>
             </div>
         
             <div class="col">
@@ -55,12 +55,69 @@
                         </h2>
                     </div>
                 </div>
+
+                <div class="button shadow">
+                    <div id="medfam" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> Medic de familie
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow">
+                    <div id="orl" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> ORL
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow">
+                    <div id="endocr" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> Endocrinolog
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow">
+                    <div id="psiho" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> Psiholog
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow">
+                    <div id="pneumo" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> Obstetrica / Ginecologie
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow">
+                    <div id="pneumo" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> Pneumolog
+                        </h2>
+                    </div>
+                </div>
+
+                <div class="button shadow">
+                    <div id="pneumo" class="text" onclick="getLocation()">
+                        <h2>
+                            <i class="fa-solid fa-lungs"></i> Dermatologie
+                        </h2>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="background_elements circle shadow">
+            <!-- <div class="background_elements circle shadow">
                 <div class="background_elements innercircle shadow">
                 </div>
-            </div>
+            </div> -->
             
         </div>
 
@@ -83,6 +140,7 @@
             const longitude = position.coords.longitude;
             alert('Latitude: ' + latitude + ' Longitude: ' + longitude);
         }
+
     </script>
         
     </body>
