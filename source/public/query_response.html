@@ -43,6 +43,15 @@
             </div>
 
         </div>
-    
+
+        <script>
+          let queryString = window.location.search;
+          let urlParams = new URLSearchParams(queryString);
+          let jsonData = urlParams.get("jsonData");
+          let decodedData = decodeURIComponent(jsonData);
+          console.log(decodedData)
+          
+        </script>
+
     </body>
 </html>
